@@ -16,6 +16,10 @@
 		<module>bmall-order</module>
 		<module>bmall-product</module>
 		<module>bmall-ware</module>
+		<module>renren-fast</module>
+		<module>renren-generator</module>
+		<module>bmall-common</module>
+		<module>bmall-gateway</module>
 	</modules>
 
 </project>
