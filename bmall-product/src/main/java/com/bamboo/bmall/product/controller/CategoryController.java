@@ -85,12 +85,14 @@ public class CategoryController {
 
     /**
      * 删除
+     * @RequestBody 表示从请求体中结构出请求体,必须为post请求,
+     * sprigmvc 会自动完成将json请求 转换为对应的对象
      */
     @RequestMapping("/delete")
     //@RequiresPermissions("product:category:delete")
     public R delete(@RequestBody Long[] catIds){
 		categoryService.removeByIds(Arrays.asList(catIds));
-
+        categoryService.removeMenu(Arrays.asList(catIds));
         return R.ok();
     }
 
